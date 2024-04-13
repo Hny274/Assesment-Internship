@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Features from "./Features";
 import Broucher from "./Broucher";
 import Navbar from "./shared/navbar";
+import Footer from "./shared/Footer";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Features />
       <ApartmentViews />
       <Broucher />
+      <Footer />
     </section>
   );
 };

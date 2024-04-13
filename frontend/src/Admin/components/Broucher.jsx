@@ -4,6 +4,7 @@ import axios from "axios";
 import { API_LINK } from "../../utils/api";
 import toast from "react-hot-toast";
 import { uploadToCloudinary } from "../../utils/uploadToCloudinary";
+import Title from "./Title";
 const Broucher = ({ id }) => {
   const [formData, setFormData] = useState({
     file: null,
@@ -51,8 +52,8 @@ const Broucher = ({ id }) => {
   };
 
   return (
-    <form className="w-[50%] mt-10 mx-auto" onSubmit={handleSubmit}>
-      <p className="w-full text-center text-white/70 mb-2 text-lg">Broucher</p>
+    <form className="w-[90%] md:w-[50%] mt-10 mx-auto" onSubmit={handleSubmit}>
+      <Title title={"Broucher"} />
       <UploadFile setFile={handleFileChange} image={formData?.image} />
       <button
         type="submit"

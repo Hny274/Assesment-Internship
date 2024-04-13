@@ -8,10 +8,10 @@ import Facilities from "./Apartment Views/Facilities";
 const ApartmentViews = () => {
   const [active, setActive] = useState("Plans");
   return (
-    <section className="min-h-[100vh] flex justify-center items-center w-full flex-col bg-[#d9d9d9] py-14">
+    <section className="min-h-[100vh] flex justify-start items-center w-full flex-col bg-[#d9d9d9] py-14">
       <div className="w-full container flex justify-center items-center flex-col">
         <Title title={"APARTMENT VIEWS"} />
-        <div className="grid grid-cols-3 my-7 w-[50%] gap-6">
+        <div className="grid grid-cols-3 my-7 w-[90%] md:w-[50%] gap-6">
           <Button
             title={"Plans"}
             active={active === "Plans"}

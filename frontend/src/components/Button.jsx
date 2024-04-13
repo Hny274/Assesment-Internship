@@ -2,9 +2,9 @@ const Button = ({ title, active, setActive }) => {
   return (
     <button
       onClick={() => setActive(title)}
-      className={`p-2 ${
+      className={`p-3 md:p-2 ${
         !active ? "bg-[#4A4646]" : "bg-[#292929]"
-      }  text-white font-bold rounded-md text-xl uppercase flex-grow`}
+      }  text-white font-bold rounded-md md:text-xl uppercase flex-grow`}
     >
       {title}
     </button>

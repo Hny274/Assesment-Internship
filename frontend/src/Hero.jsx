@@ -24,11 +24,15 @@ const Main = () => {
   };
 
   return (
-    <section className="min-h-[90vh] container mx-auto flex justify-center items-center w-full flex-col py-14">
-      <img src={data && data.image} alt="" className="w-[40%] object-cover" />
-      <div className="w-[65%] flex justify-center items-center flex-col my-6">
+    <section className="md:min-h-[90vh] container mx-auto flex justify-center items-center w-full flex-col pt-20 md:py-14">
+      <img
+        src={data && data.image}
+        alt=""
+        className="w-[90%] md:w-[40%] object-cover"
+      />
+      <div className="w-[90%] md:w-[65%] flex justify-center items-center flex-col my-8 md:my-6">
         <Title title={data && data.title} />
-        <p className="mt-4">{data && data.description}</p>
+        <p className="mt-4 text-justify">{data && data.description}</p>
       </div>
     </section>
   );

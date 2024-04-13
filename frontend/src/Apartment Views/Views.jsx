@@ -27,7 +27,7 @@ const Views = () => {
   return (
     <div className="flex flex-col mx-auto w-full justify-center items-center">
       <img src={images[0]} alt="" className="h-[200px] w-[90%] object-cover" />
-      <div className="grid grid-cols-4 gap-x-4 w-[90%] mt-[16px]">
+      <div className="grid grid-cols-2 grid-row-2 md:grid-cols-4 gap-4 w-[90%] mt-[16px]">
         {Array(4)
           .fill(0)
           .map((_, index) => {
@@ -35,7 +35,7 @@ const Views = () => {
               <img
                 src={images[index + 1]}
                 key={index}
-                className="w-full aspect-square cursor-pointer"
+                className="w-full aspect-square object-cover cursor-pointer"
                 onClick={() => replaceImage(images[index + 1], index + 1)}
               />
             );

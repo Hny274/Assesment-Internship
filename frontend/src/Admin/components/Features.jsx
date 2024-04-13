@@ -4,6 +4,7 @@ import axios from "axios";
 import { API_LINK } from "../../utils/api";
 import toast from "react-hot-toast";
 import { uploadToCloudinary } from "../../utils/uploadToCloudinary";
+import Title from "./Title";
 
 const Features = ({ id }) => {
   const advanceFeaturesList = [
@@ -198,12 +199,10 @@ const Features = ({ id }) => {
   };
 
   return (
-    <form className="w-[50%] mx-auto my-10" onSubmit={handleSubmit}>
+    <form className="w-[90%] md:w-[50%] mx-auto my-10" onSubmit={handleSubmit}>
+      <Title title={"Facing of Building"} />
       <UploadFile setFile={handleFacingFileChange} image={facing?.image} />
       <div className="flex justify-start items-center flex-col my-8">
-        <label htmlFor="facing" className="w-full text-white/70 mb-2">
-          Facing of Building
-        </label>
         <input
           type="text"
           name="facing"
@@ -215,9 +214,9 @@ const Features = ({ id }) => {
           className="w-full bg-[#4d4d4d] p-2 rounded text-white/70 caret-white outline-none"
         />
       </div>
+      <Title title={"BHK Information"} />
       <UploadFile setFile={handleBHKFileChange} image={bhk?.image} />
       <div className="flex justify-start items-center flex-col my-8">
-        <label className="w-full text-white/70 mb-2">BHK</label>
         <div className="flex justify-between items-center w-full">
           {Array(4)
             .fill(0)
@@ -247,11 +246,9 @@ const Features = ({ id }) => {
             })}
         </div>
       </div>
+      <Title title={"Floor"} />
       <UploadFile setFile={handleFloorFileChange} image={floor?.image} />
       <div className="flex justify-start items-center flex-col my-8">
-        <label htmlFor="floor" className="w-full text-white/70 mb-2">
-          Floor
-        </label>
         <input
           type="text"
           name="floor"
@@ -261,12 +258,12 @@ const Features = ({ id }) => {
           className="w-full bg-[#4d4d4d] p-2 rounded text-white/70 caret-white outline-none"
         />
       </div>
+      <Title title={"Advance Features"} />
       <UploadFile
         setFile={handleAdvanceFeatureFileChange}
         image={advanceFeatures?.image}
       />
       <div className="flex justify-start items-center flex-col my-8">
-        <label className="w-full text-white/70 mb-2">Advance Features</label>
         <div className="grid grid-cols-3 place-items-start gap-2 w-full">
           {advanceFeaturesList.map((item, index) => {
             return (
@@ -293,7 +290,7 @@ const Features = ({ id }) => {
       </div>
       <button
         type="submit"
-        className="mt-6 bg-[#4d4d4d] text-[#212020] font-semibold py-2 px-4 rounded w-[30%] mx-auto block"
+        className="mt-6 bg-[#4d4d4d] text-[#212020] font-semibold py-2 px-4 rounded w-[50%] md:w-[30%] mx-auto block"
       >
         Save Changes
       </button>

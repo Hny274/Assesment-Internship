@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ open }) => {
   const [active, setActive] = useState("Completed Projects");
   return (
-    <section className="w-[20%] h-[100vh] bg-[#313131]">
+    <section
+      className={`w-full flex flex-col ${
+        open ? "flex" : "hidden md:flex"
+      } md:w-[20%] h-[100vh] bg-[#313131]`}
+    >
       <div className="flex justify-center items-center flex-col h-[80vh]">
         <button
           onClick={() => setActive("Completed Projects")}

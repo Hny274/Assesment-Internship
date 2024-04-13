@@ -23,8 +23,8 @@ const Broucher = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-start items-center py-14 px-4">
-      <div className="w-full text-center mb-20">
+    <section className="flex flex-col justify-start items-center py-14 px-4">
+      <div className="w-full text-center mb-10">
         <Title title={"BROUCHER"} />
       </div>
       <img src={data && data?.image} alt="" className="w-1500 md:w-96" />

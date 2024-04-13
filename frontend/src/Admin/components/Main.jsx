@@ -4,6 +4,7 @@ import axios from "axios";
 import { API_LINK } from "../../utils/api";
 import toast from "react-hot-toast";
 import { uploadToCloudinary } from "../../utils/uploadToCloudinary";
+import Title from "./Title";
 const Main = ({ setId }) => {
   const [formData, setFormData] = useState({
     title: "",
@@ -64,7 +65,8 @@ const Main = ({ setId }) => {
   };
 
   return (
-    <form className="w-[50%] mt-10 mx-auto" onSubmit={handleSubmit}>
+    <form className="w-[90%] md:w-[50%] mt-10 mx-auto" onSubmit={handleSubmit}>
+      <Title title={"Project Details"} />
       <UploadFile setFile={handleFileChange} image={formData?.image} />
       <div className="flex justify-start items-center flex-col mt-6">
         <label htmlFor="title" className="w-full text-white/70 mb-2">
@@ -107,7 +109,7 @@ const Main = ({ setId }) => {
       </div>
       <button
         type="submit"
-        className="mt-6 bg-[#4d4d4d] text-[#212020] font-semibold py-2 px-4 rounded w-[30%] mx-auto block"
+        className="mt-6 bg-[#4d4d4d] text-[#212020] font-semibold py-2 px-4 rounded w-[50%] md:w-[30%] mx-auto block"
       >
         Save Changes
       </button>

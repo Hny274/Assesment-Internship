@@ -17,7 +17,7 @@ const UploadFile = ({ setFile, image }) => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center flex-col md:flex-row">
       <FileUploader handleChange={handleChange} name="file" types={fileTypes}>
         <div className="border-2 border-white border-dashed h-[150px] w-[240px] flex-col rounded mx-auto flex justify-center items-center">
           <FaFileArrowUp className="text-white text-3xl" />
@@ -28,9 +28,19 @@ const UploadFile = ({ setFile, image }) => {
         </div>
       </FileUploader>
       {imageURL ? (
-        <img src={imageURL} alt="Uploaded" className="h-[140px]  ml-4" />
+        <img
+          src={imageURL}
+          alt="Uploaded"
+          className="h-[140px] md:ml-4 mt-4 md:mt-0"
+        />
       ) : (
-        image && <img src={image} alt="Uploaded" className="h-[140px]  ml-4" />
+        image && (
+          <img
+            src={image}
+            alt="Uploaded"
+            className="h-[140px] md:ml-4 mt-4 md:mt-0"
+          />
+        )
       )}
     </div>
   );
